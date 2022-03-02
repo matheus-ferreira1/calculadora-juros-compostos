@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    
+
+
+    <title>Calculadora juros compostos</title>
+</head>
+<body>
+
+
+        
+        <div class="wrapper">
+            <h2>Calculadora de Juros Compostos</h2>
+            <div class="wrapper-upper">
+                <div class="valor-inicio general-box">
+                    <label for="valor_inicial">Valor inicial (R$)</label><br>
+                    <div class="input-lower">
+                        <input step="0.01" min="0.01" max="9999999999.99" name="valor_inicial" type="number" placeholder="0,00" required="required" id="valor_inicial">
+                    </div>
+                </div>
+    
+                <div class="valor-mensal general-box">
+                    <label for="valor_mensal">Valor mensal (R$)</label><br>
+                    <div class="input-lower">
+                        <input step="0.01" min="0.01" max="9999999999.99" name="valor_mensal" type="number" placeholder="0,00" required="required" id="valor_mensal">
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="wrapper-lower">
+                <div class="taxa-juros general-box">
+                    <label for="taxa_juros">Taxa de juros (%)</label><br>
+                    <div class="input-lower">
+                        <input name="taxa_juros" type="number" placeholder="0,00" required="required" id="taxa_juros">
+                        <select name="anual-mensal" class="box-right" id="mensal_anual">
+                            <option value="mensal">Mensal</option>
+                            <option value="anual">Anual</option>
+                        </select>
+                    </div>
+                    
+                </div>
+    
+                <div class="periodo-total general-box">
+                    <label for="periodo_total">Período</label><br>
+                    <div class="input-lower">
+                        <input name="periodo_total" type="number" placeholder="0" required="required" id="periodo">
+                        <select name="anos-meses" class="box-right" id="meses_anos">
+                            <option value="meses">Meses</option>
+                            <option value="anos">Anos</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="botoes">
+                <button class="btn" onclick="calcularJuros()">calcular</button>
+                <button class="btn" onclick="limparTela()">Limpar</button>
+            </div>
+
+            <div class="result-wrapper">
+                <div class="result-box">
+                    <h6>Valor total final:</h6>
+                    <p id="total-final"></p>
+                </div>
+                <div class="result-box">
+                    <h6>Valor total investido:</h6>
+                    <p id="total-invest"></p>
+                </div>
+                <div class="result-box">
+                    <h6>Total em juros:</h6>
+                    <p id="total-juros"></p>
+                </div>
+            </div>
+
+        </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
