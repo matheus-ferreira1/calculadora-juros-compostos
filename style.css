@@ -13,6 +13,7 @@ body {
 
 .wrapper h2 {
     text-align: center;
+    margin-bottom: 5px
 }
 
 .wrapper {
@@ -23,12 +24,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: rgb(255, 215, 255);
+    background-color: rgb(255, 235, 255);
     padding: 10px 0 10px 0;
 }
 
 .wrapper-upper {
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +36,6 @@ body {
 }
 
 .wrapper-lower {
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,20 +43,47 @@ body {
 }
 
 .botoes {
-    border: 1px solid red;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
     gap: 20px;
     width: 500px;
 }
 
+.botoes .btn {
+    padding: 10px 18px;
+    text-transform: capitalize;
+    font-weight: bold;
+    background-color: #ffbf60;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 5px;
+    transition: 250ms all;
+}
+
+.botoes .btn:hover {
+    background-color: #ff9900;
+    
+}
+
+.botoes .btn:last-child {
+    background-color: rgb(255, 112, 112)
+}
+
+.botoes .btn:last-child:hover {
+    background-color: rgb(255, 24, 24)
+}
+
 .wrapper label {
-    font-size: 13px;
+    font-size: 0.8em;
 }
 
 .general-box {
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 15px;
 }
 
 .input-lower {
@@ -67,9 +93,10 @@ body {
 
 .input-lower input {
     border: 1px solid #969696;
-    border-left: none;
+    padding: 4px 10px;
+    width: 100%;
+    text-align: center;
 } 
-
 
 #box-left {
     text-align: center;
@@ -82,12 +109,26 @@ body {
 .result-wrapper {
     display: flex;
     gap: 30px;
-    border: 1px solid red;
 }
 
 .result-box {
-    height: 100px;
-    width: 100px;
-    background-color: #969696;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+    background-color: #e6e6e6;
+    text-align: center;
     border: 1px solid red;
+    line-height: 5px;
+    font-size: 0.8em;
+}
+
+.result-box p:last-child {
+    font-weight: bold;
+    margin-top: 1px;
+    font-size: 1.5em;
+}
+
+.result-box p:last-child::before {
+    content: 'R$ '
 }
